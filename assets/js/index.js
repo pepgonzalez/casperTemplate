@@ -20,6 +20,16 @@
             $("body").toggleClass("nav-opened nav-closed");
         });
 
+        moment.locale('es');
+
+        $('.post-date').each(function (i, date) {
+            var $date = $(date);
+
+            $date.html(
+                moment($date.attr('datetime')).format('LL')
+            );
+        });
+
     });
 
     // Arctic Scroll by Paul Adam Davis
